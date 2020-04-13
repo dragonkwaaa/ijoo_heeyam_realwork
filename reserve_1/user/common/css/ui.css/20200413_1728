@@ -1,0 +1,531 @@
+*{
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+html,body{
+	text-size-adjust: none;
+	-webkit-text-size-adjust: none;
+	-moz-text-size-adjust: none;
+	-ms-text-size-adjust: none;
+}
+
+ul:after {
+	clear: both;
+	content: '';
+	display: block;
+}
+section{
+	background-color: #fff;
+}
+
+section.space{
+	padding-left:15px;
+	padding-right:15px;
+}
+
+section h1{
+	display:none;
+}
+
+input.hidden{
+	display:none;
+}
+input[type="search"]::-webkit-search-cancel-button {
+	display: none;
+}
+/*input[type="search"]::-webkit-search-decoration,*/
+/*input[type="search"]::-webkit-search-cancel-button,*/
+/*input[type="search"]::-webkit-search-results-button,*/
+/*input[type="search"]::-webkit-search-results-decoration {*/
+/*display: none;*/
+/*}*/
+
+
+
+
+
+/* 배경 색상 */
+
+
+/** 메인 컬러 **/
+.col_main{
+	background-color: #ce2027;
+}
+.col_grey{
+	background-color: #b7b7b7;
+}
+.col_darkGrey{
+	background-color: #979797;
+}
+
+.tbox{
+	box-shadow: none;
+	-webkit-appearance: none; /* 아이폰 기본 박스쉐도우 삭제 */
+}
+
+.tbox:read-only{
+	background-color: #f1f1f1;
+}
+.tbox:read-only:focus{
+	border-color:#cdcccc;
+}
+
+/* ksg_20190117_2124 : add for reserve_1\user\intro\find_id.php */
+.f_w{
+    color: #fff;
+}
+
+.f_main{
+	color: #ce2027;
+}
+
+.f_grey{
+	color: #999999;
+}
+
+.bold{
+	font-weight: 700;
+}
+
+.btn{
+	border-radius:3px;
+	display:inline-block;
+	text-align: center;
+	font-weight: 700;
+}
+.btn.input{
+	width:95px;
+	line-height: 27px;
+	font-size: 12px;
+	color: #fff;
+
+}
+
+
+.btn.full{
+	width:100%;
+	line-height: 50px;
+	font-size: 15px;
+	color: #fff;
+}
+.btn.half{
+	width:calc(50% - 10px);
+	line-height: 40px;
+	color: #fff;
+	font-size: 15px;
+	margin-right:20px;
+}
+
+.btn.triple{
+	width:calc(33.33% - 6.7px);
+	line-height: 40px;
+	color: #fff;
+	font-size: 15px;
+	margin-right:10px;
+}
+
+
+.btn.half + .btn.half{
+	margin-right:0;
+}
+.btn.triple + .btn.triple + .btn.triple{
+	margin-right:0;
+
+}
+
+
+
+/* 폰트 스타일 */
+.underline{
+	text-decoration: underline;
+	text-underline-position: below;
+}
+
+.line_two{
+	overflow:hidden;
+	text-overflow: ellipsis;
+	display: -webkit-box;
+	-webkit-line-clamp: 2; /* 라인수 */
+	-webkit-box-orient: vertical;
+	word-wrap:break-word;
+
+}
+
+
+/* 인풋박스 */
+
+.input_box{
+	height:45px;
+	position:relative;
+}
+.input_box.focus{
+	border-color:#000;
+}
+
+.input_box.top .tbox{
+	border-bottom-left-radius: 0;
+	border-bottom-right-radius: 0;
+}
+.input_box.bottom .tbox {
+	border-top-left-radius: 0;
+	border-top-right-radius: 0;
+}
+.input_box.bottom{
+
+	margin-top:-1px;
+}
+
+.input_box .tbox{
+	width:100%;
+	font-size: 12px;
+	vertical-align: middle;
+	display:inline-block;
+	padding:0 39px 0 37px;
+	height:100%;
+	line-height: 45px;
+	border-radius:3px;
+	border:1px solid #cdcccc;
+}
+input::-webkit-input-placeholder { /* WebKit browsers */
+	font-size: 12px;
+	line-height: 45px;
+	height:100%;
+}
+
+.input_box .tbox.button_type{
+	padding-right:116px;
+}
+
+
+.input_box .input_remove,
+.input_box .input_icon,
+.input_box .input_button{
+	z-index: 9;
+	top:50%;
+	transform: translateY(-50%);
+	position:absolute;
+
+}
+.input_box .input_icon{
+	left:15px;
+}
+
+/* 인풋 이미지 */
+
+.input_box .tbox ~ .input_icon .id{
+	background: url("../img/icon_id_off.png") no-repeat center / cover;
+	width:15px;
+	height:15px;
+}
+.input_box .tbox:focus ~ .input_icon .id{
+	background: url("../img/icon_id_on.png") no-repeat center / cover;
+}
+
+.input_box .tbox ~ .input_icon .pw{
+	background: url("../img/icon_pw_off.png") no-repeat center / cover;
+	width:15px;
+	height:18px;
+}
+.input_box .tbox:focus ~ .input_icon .pw{
+	background: url("../img/icon_pw_on.png") no-repeat center / cover;
+}
+
+.input_box .tbox ~ .input_icon .user{
+	background: url("../img/icon_user_off.png") no-repeat center / cover;
+	width:15px;
+	height:16px;
+}
+.input_box .tbox:focus ~ .input_icon .user{
+	background: url("../img/icon_user_on.png") no-repeat center / cover;
+}
+
+.input_box .tbox ~ .input_icon .phone{
+	background: url("../img/icon_phone_off.png") no-repeat center / cover;
+	width:15px;
+	height:16px;
+}
+.input_box .tbox:focus ~ .input_icon .phone{
+	background: url("../img/icon_phone_on.png") no-repeat center / cover;
+}
+.input_box .tbox:read-only:focus ~ .input_icon .phone{
+	background: url("../img/icon_phone_off.png") no-repeat center / cover;
+}
+
+.input_box .tbox ~ .input_icon .certify{
+	background: url("../img/icon_certify_off.png") no-repeat center / cover;
+	width:15px;
+	height:17px;
+}
+.input_box .tbox:focus ~ .input_icon .certify{
+	background: url("../img/icon_certify_on.png") no-repeat center / cover;
+}
+.input_box .tbox:read-only:focus ~ .input_icon .certify{
+	background: url("../img/icon_certify_off.png") no-repeat center / cover;
+}
+.input_box .tbox ~ .input_icon .recommend{
+	background: url("../img/icon_recommend_off.png") no-repeat center / cover;
+	width:15px;
+	height:14px;
+}
+.input_box .tbox:focus ~ .input_icon .recommend{
+	background: url("../img/icon_recommend_on.png") no-repeat center / cover;
+}
+.input_box .tbox ~ .input_icon .mail{
+	background: url("../img/icon_mail_off.png") no-repeat center / cover;
+	width:15px;
+	height:11px;
+}
+.input_box .tbox:focus ~ .input_icon .mail{
+	background: url("../img/icon_mail_on.png") no-repeat center / cover;
+}
+.input_box .tbox ~ .input_icon .point{
+	background: url("../img/icon_point_off.png") no-repeat center / cover;
+	width:15px;
+	height:15px;
+}
+.input_box .tbox:focus ~ .input_icon .point{
+	background: url("../img/icon_point_on.png") no-repeat center / cover;
+}
+
+
+
+.input_box .input_remove{
+	display:none;
+	cursor:pointer;
+	right:15px;
+}
+.input_box .input_remove .removeBtn{
+	background: url("../img/icon_input_removeBtn.png") no-repeat center / cover;
+	width:18px;
+	height:18px;
+}
+
+.input_box .input_button{
+	right:15px;
+}
+
+
+.tbox{
+	border:1px solid #cdcccc;
+	border-radius:3px;
+	font-size: 12px;
+	height:35px;
+	padding:0 9px;
+	outline: none;
+}
+
+.tbox:focus{
+	border-color: #000;
+}
+
+.tbox.full{
+	width:100%;
+}
+
+
+
+
+
+
+
+
+/* 셀렉트 라디오 박스 */
+input::-ms-check{ /* 익스플로러 체크박스 숨기기*/
+	display:none
+}
+select::-ms-expand {
+	display: none;
+}
+input[type=checkbox] {
+	-webkit-appearance: none;
+	-moz-appearance:    none;
+	appearance:         none;
+}
+
+
+label input[type=checkbox],
+label input[type=radio]{
+	cursor:pointer;
+	outline:none;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+	background:url("../img/icon_cboxOff.png") no-repeat left center / cover;
+	display:inline-block;
+	width:18px;
+	height:18px;
+	margin:0;
+	vertical-align: middle;
+}
+label input[type=checkbox]:checked{
+	background:url("../img/icon_cboxOn.png") no-repeat left center / cover;
+}
+label input[type=radio] {
+	background:url("../img/icon_rboxOff.png") no-repeat left center / cover;
+
+}
+label input[type=radio]:checked {
+	background:url("../img/icon_rboxOn.png") no-repeat left center / cover;
+}
+
+
+
+input[type=checkbox] + span,
+input[type=radio] + span{
+	padding-left:7px;
+	padding-top: 3px;
+	font-size: 12px;
+	color: #666766;
+	display:inline-block;
+	vertical-align: middle;
+	cursor:pointer;
+}
+
+input[type=radio] + span{
+	font-size: 12px;
+}
+
+
+/* 셀렉트박스 */
+
+.sbox select{
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	-ms-appearance: none;
+	appearance: none;
+	outline: 0;
+	box-shadow: none;
+	border: 0 none;
+	background: #fff;
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	padding: 0 0 0 7px;
+	cursor: pointer;
+	vertical-align: top;
+	color: #999999;
+	font-size: 12px;
+}
+.sbox.sel select{
+	color: #000;
+}
+
+.sbox{
+	position:relative;
+	border:1px solid #cdcccc;
+	border-radius:3px;
+	height:35px;
+	overflow:hidden;
+	display:inline-block;
+}
+.sbox.full{
+	width:100%;
+}
+.sbox:after{
+	content: '';
+	background:url("../img/icon_select_arrow.png") no-repeat center / 10px 6px;
+	display:inline-block;
+	position: absolute;
+	width:10px;
+	height:6px;
+	top: 50%;
+	transform: translateY(-50%);
+	right: 9px;
+	pointer-events: none;
+	color: #aaaaaa;
+	border-bottom-right-radius: 4px;
+	border-top-right-radius: 4px;
+}
+
+
+/* paging */
+
+
+.paging_group{
+	text-align: center;
+	padding:25px 0;
+}
+.paging_group a{
+	margin:0 4px;
+	display:inline-block;
+	padding:3px 5px;
+	vertical-align: middle;
+}
+.paging_group a .text{
+	font-size: 12px;
+	color: #000;
+	font-weight: 700;
+	display:inline-block;
+	vertical-align: middle;
+}
+.paging_group a.on .text {
+	color: #ce2027;
+}
+
+.paging_group .prev{
+	background:url("../img/icon_paging_prev.png") no-repeat center / cover;
+	width:5px;
+	height:9px;
+}
+.paging_group .next{
+	background:url("../img/icon_paging_next.png") no-repeat center / cover;
+	width:5px;
+	height:9px;
+}
+
+
+
+/* 마진 패딩 */
+.ml5 {
+	margin-left:5px;
+}
+.ml10 {
+	margin-left:10px;
+}
+
+.mr5 {
+	margin-right:5px;
+}
+.mr10 {
+	margin-right:105px;
+}
+
+
+.box-2{
+	width:50%;
+}
+.box-3{
+	width:33.33%;
+}
+.box-4{
+	width:25%;
+}
+.box-5{
+	width:20%;
+}
+
+
+/* ksg_20190322_1255 single : 안 보이게 하기 위한 범용성 클래스 */
+.hide {
+    display : none;
+}
+
+/* ksg_20190322_1415 single : pre 태그에  white-space 간편하게 넣기 위해 만든 스타일 */
+pre {
+    white-space : pre-wrap;
+}
+
+/* ksg_20190419_1132 single : 폰트사이즈 25 */
+.f_25 {
+	font-size : 25px;
+}
+.f_15 {
+	font-size : 15px;
+}
+
+/* ksg_20190708_2020 single : 공용으로 사용할 클래스 추가 */
+.relative {
+	position : relative;
+}
